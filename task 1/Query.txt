@@ -1,0 +1,2 @@
+SELECT d.name AS DEPT_NAME, AVG(s.AMT) AS "AVG_MONTHLY_SALARY (USD)" FROM Departments d INNER JOIN Employees e ON d.id = e.dept_id
+INNER JOIN Salaries s ON e.id = s.EMP_ID GROUP BY d.name ORDER BY AVG(s.AMT) DESC LIMIT 3;
